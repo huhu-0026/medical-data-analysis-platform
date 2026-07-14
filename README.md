@@ -12,8 +12,6 @@
 
 ## 🏗 系统架构
 
-## 🏗 系统架构
-
 ```mermaid
 flowchart TD
     A[合成医疗数据生成器<br/>Faker + Python] --> B[(PostgreSQL 数据库)]
@@ -172,11 +170,13 @@ pip install -r requirements.txt
 Create `.env`
 
 ```text
+DB_DRIVER=postgresql+psycopg2
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=medical_data_practice
 DB_USER=postgres
 DB_PASSWORD=your_password
+DATASET_MODE=synthetic
 ```
 
 ### 4. Run
