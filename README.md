@@ -12,10 +12,11 @@
 
 ## 🏗 系统架构
 
+## 🏗 系统架构
+
 ```mermaid
 flowchart TD
     A[合成医疗数据生成器<br/>Faker + Python] --> B[(PostgreSQL 数据库)]
-
     B --> C[数据读取<br/>SQLAlchemy]
     C --> D[数据标准化<br/>性别与 ICD 映射]
     D --> E[数据质量检查<br/>患者、诊断、用药规则]
@@ -24,8 +25,8 @@ flowchart TD
 
     G --> H[Excel 自动报告<br/>OpenPyXL]
     G --> I[Python 图表<br/>Matplotlib]
-    B --> J[Power BI 数据模型]
 
+    B --> J[Power BI 数据模型]
     J --> K[DAX 业务指标]
     K --> L[医疗运营总览]
     K --> M[患者画像分析]
@@ -117,38 +118,38 @@ flowchart TD
 ## 🛠 Tech Stack
 
 | Layer | Technology | Responsibility |
-|--------|------------|----------------|
-| Programming | Python 3.12 | Data generation, cleaning and analytics |
-| Database | PostgreSQL 18 | Healthcare data storage |
-| Data Access | SQLAlchemy | Database connection and ORM |
-| Data Processing | Pandas | ETL and analytical processing |
-| Data Visualization | Matplotlib | Static charts and reports |
-| Business Intelligence | Power BI | Interactive dashboards |
-| BI Modeling | DAX | KPI calculation and business metrics |
-| Data Generation | Faker | Synthetic healthcare dataset generation |
-| Report Export | OpenPyXL | Excel report generation |
-| Configuration | python-dotenv | Environment management |
+|---|---|---|
+| Programming | Python 3.12 | 数据生成、清洗与分析 |
+| Database | PostgreSQL | 医疗业务数据存储 |
+| Data Access | SQLAlchemy | 数据库连接与访问 |
+| Data Processing | Pandas | ETL 与统计分析 |
+| Visualization | Matplotlib | 静态分析图表 |
+| Business Intelligence | Power BI | 交互式分析看板 |
+| BI Modeling | DAX | KPI 与业务指标计算 |
+| Data Generation | Faker | 合成医疗数据生成 |
+| Report Export | OpenPyXL | Excel 报告生成 |
+| Configuration | python-dotenv | 环境变量管理 |
 
 ## 📁 Project Structure
 
 ```text
-medical_data_analysis_platform
-│
-├── analysis/          # Business analytics
-├── generator/         # Synthetic data generator
-├── loader/            # PostgreSQL data loader
-├── quality/           # Data quality rules
-├── standard/          # Data standardization
-├── visualization/     # Python charts
-├── report/            # Excel report
-├── powerbi/           # Power BI dashboard
+medical-data-analysis-platform/
+├── analysis/          # 指标与业务分析
+├── generator/         # 合成医疗数据生成
+├── loader/            # PostgreSQL 数据读取
+├── quality/           # 数据质量规则
+├── standard/          # 字段与 ICD 标准化
+├── visualization/     # Python 图表生成
+├── report/            # Excel 报告生成
+├── powerbi/           # Power BI 看板文件
 ├── docs/
-│   └── images/
-├── output/
-├── sql/
-├── main.py
+│   ├── diagrams/      # 架构图、ER 图源文件
+│   └── images/        # README 展示图片
+├── sql/               # 数据库初始化脚本
 ├── config.py
-└── README.md
+├── logger.py
+├── main.py
+└── requirements.txt
 ```
 
 ## 🚀 Quick Start
@@ -156,7 +157,8 @@ medical_data_analysis_platform
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourname/medical_data_analysis_platform.git
+git clone https://github.com/huhu-0026/medical-data-analysis-platform.git
+cd medical-data-analysis-platform
 ```
 
 ### 2. Install Dependencies
@@ -191,27 +193,6 @@ Open
 powerbi/medical_data_analysis_dashboard.pbix
 ```
 
-## 📁 Project Structure
-
-```text
-medical_data_analysis_platform
-│
-├── analysis/          # Business analytics
-├── generator/         # Synthetic healthcare data generation
-├── loader/            # PostgreSQL data loader
-├── quality/           # Data quality validation
-├── standard/          # Data standardization
-├── visualization/     # Python charts
-├── report/            # Excel report generation
-├── powerbi/           # Power BI dashboard
-├── docs/
-│   └── images/
-├── sql/
-├── output/
-├── config.py
-├── main.py
-└── README.md
-```
 
 ## 📜 License
 
