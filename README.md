@@ -216,3 +216,7 @@ medical_data_analysis_platform
 ## 📜 License
 
 This project is released under the MIT License.
+
+## 🗄 Database Model
+
+![ER Diagram](docs/images/er-diagram.png)
